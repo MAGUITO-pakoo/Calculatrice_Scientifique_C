@@ -33,3 +33,19 @@ unsigned int ppcm(int a, int b){
     }
     return abs(a * b) / pgcd(a, b);
 }
+
+float racineCarree(float a){
+    float epsilon = 0.0001; // précision
+    float pas = 0.001;     // pas pour approx
+    float resultat = 0.0;
+
+    while (resultat*resultat < a){
+        resultat += pas;
+    }
+    return resultat;
+}
+
+float soustraction(float a, float b){
+    float resultat = a-b;
+    return resultat ;
+}
