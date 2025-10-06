@@ -3,11 +3,6 @@
 float soustraction(float a, float b);
 float racineCarree(float a);
 int main(){
-    float resultat;
-
-    resultat = racineCarree(2.0);
-    printf ("%f\n", resultat);
-
     return 0;
 }
 
@@ -25,4 +20,5 @@ float racineCarree(float a){
         resultat += pas;
     }
     return resultat;
+
 }
