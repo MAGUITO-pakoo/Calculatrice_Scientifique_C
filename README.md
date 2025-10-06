@@ -2,4 +2,4 @@
 
 commande de compilation: 
 [PowerShell]
-gcc main.c function.c -o main.exe
+gcc calco.c function.c -o calco.exe
