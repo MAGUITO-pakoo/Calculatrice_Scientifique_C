@@ -1,4 +1,8 @@
-#include "./header.h"
+#include <stdio.h>
+#include "operations.h"
+#include "puissance.h"
+#include "trigo.h"
+#include "utils.h"
 
 int main()
 {
@@ -67,3 +71,22 @@ int main()
 
 
 
+/* int main() {
+    int a, b, resultat;
+
+    
+    printf("Entrez le premier nombre : ");
+    scanf("%d", &a);
+
+    printf("Entrez le deuxième nombre : ");
+    scanf("%d", &b);
+
+    
+    resultat = somme(a, b);
+
+
+    printf("La somme de %d et %d est %d\n", a, b, resultat);
+
+    return 0;
+}
+ */

@@ -1,8 +1,25 @@
-#include "header.h"
 
-int multiplication(int a, int b)
-{
+#include <cmath>
+#include "operations.h"
+
+int somme(int x, int y) {
+    return x + y;
+}
+
+float soustraction(float a, float b) {
+    return a - b;
+}
+
+int multiplication(int a, int b) {
     return a*b;
+}
+
+int division(int a, int b) {
+    if(b == 0){
+        printf("division paar zéro(0) impossible\n");
+        return NAN;
+    }
+    return a / b;
 }
 
 unsigned int factoreil(unsigned int a)
@@ -45,7 +62,3 @@ float racineCarree(float a){
     return resultat;
 }
 
-float soustraction(float a, float b){
-    float resultat = a-b;
-    return resultat ;
-}
