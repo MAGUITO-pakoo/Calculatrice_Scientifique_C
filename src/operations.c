@@ -52,11 +52,14 @@ unsigned int ppcm(int a, int b){
 }
 
 float racineCarree(float a){
-    float epsilon = 0.0001; // précision
-    float pas = 0.001;     // pas pour approx
+    if (a<0){
+        return -1;
+    }
+    float epsilon = 0.0000001; // précision
+    float pas = 0.000001;     // pas pour approx
     float resultat = 0.0;
 
-    while (resultat*resultat < a){
+    while ((resultat*resultat - a)> epsilon){
         resultat += pas;
     }
     return resultat;
