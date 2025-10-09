@@ -104,21 +104,21 @@ int main()
             printf(CYAN " Fonctionnalite 10: Sinus \n" RESET);
             printf("Entrer un angle en degre\n" JAUNE ">> " RESET);
             scanf("%d", &n);
-            printf(VERT "sin(%d) = %d\n" RESET, n, sinus(n));
+            printf(VERT "sin(%d) = %2f\n" RESET, n, sinus(n));
             getchar();
             break;
         case 11:
             printf(CYAN " Fonctionnalite 11: Cosinus \n" RESET);
             printf("Entrer un angle en degre\n" JAUNE ">> " RESET);
             scanf("%d", &n);
-            printf(VERT "cos(%d) = %d\n" RESET, n, cosinus(n));
+            printf(VERT "cos(%d) = %2f\n" RESET, n, cosinus(n));
             getchar();
             break;
         case 12:
             printf(CYAN " Fonctionnalite 12: Tangente \n" RESET);
             printf("Entrer un angle en degre\n" JAUNE ">> " RESET);
             scanf("%d", &n);
-            printf(VERT "tan(%d) = %d\n" RESET, n, tangente(n));
+            printf(VERT "tan(%d) = %2f\n" RESET, n, tangente(n));
             getchar();
             break;
         case 99:

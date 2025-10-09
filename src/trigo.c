@@ -1,6 +1,7 @@
 #include "..\include\trigo.h"
 #include <math.h>
 
+
 float sinus(float angle) {
 return sin(angle * M_PI / 180);
 }
