@@ -1,5 +1,5 @@
-
-#include <cmath>
+#include <stdio.h>
+#include <math.h>
 #include "operations.h"
 
 int somme(int x, int y) {
@@ -17,7 +17,7 @@ int multiplication(int a, int b) {
 int division(int a, int b) {
     if(b == 0){
         printf("division paar zéro(0) impossible\n");
-        return NAN;
+        return 0;
     }
     return a / b;
 }
@@ -51,17 +51,4 @@ unsigned int ppcm(int a, int b){
     return abs(a * b) / pgcd(a, b);
 }
 
-float racineCarree(float a){
-    if (a<0){
-        return -1;
-    }
-    float epsilon = 0.0000001; // précision
-    float pas = 0.000001;     // pas pour approx
-    float resultat = 0.0;
-
-    while ((resultat*resultat - a)> epsilon){
-        resultat += pas;
-    }
-    return resultat;
-}
 

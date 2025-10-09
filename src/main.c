@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "operations.h"
 #include "puissance.h"
 #include "trigo.h"
@@ -13,6 +14,8 @@ int main()
 
     run = 1;
     while(run == 1){
+        clearScreen();
+        printf("===CALCULATRICE SCIENTIFIQUE===\n");
         printf("Faire un choix\n1) Multiplication\n2) Factoriel\n3) PGCD\n4) PPCM\n5) Soustraction\n6) Racine Carree\n99) Quitter\n>> ");
         scanf("%d", &choix);
         choix = (int)choix;
@@ -65,7 +68,7 @@ int main()
             goto debut;
         }
     }
-    printf("Fin du programme\n");
+pauseScreen();  
     return 0;
 }
 
