@@ -7,7 +7,7 @@
 
 int main()
 {
-    int n, choix, run;
+    float n, choix, run;
     unsigned int a, b;
     int x, y;
 
@@ -35,8 +35,8 @@ int main()
         case 2:
             printf(CYAN " Fonctionnalite 2: Factoriel \n" RESET);
             printf("Entrer un nombre\n" JAUNE ">> " RESET);
-            scanf("%d", &n);
-            printf(VERT "%d! = %d\n" RESET, n, factoreil(n));
+            scanf("%d", &a);
+            printf(VERT "%d! = %d\n" RESET, a, factoreil(a));
             getchar();
             break;
         case 3:
@@ -80,8 +80,8 @@ int main()
             printf("Entrer un nombre\n" JAUNE ">> " RESET);
             scanf("%d", &x);
             printf("Entrer l'exposant\n" JAUNE ">> " RESET);
-            scanf("%d", &n);
-            printf(VERT "%d ^ %d = %d\n" RESET, x, n, puissance(x, n));
+            scanf("%d", &y);
+            printf(VERT "%d ^ %d = %d\n" RESET, x, y, puissance(x, y));
             getchar();
             break;
         case 8:
@@ -89,15 +89,15 @@ int main()
             printf("Entrer un nombre\n" JAUNE ">> " RESET);
             scanf("%d", &x);
             printf("Entrer le n\n" JAUNE ">> " RESET);
-            scanf("%d", &n);
-            printf(VERT "racine %dieme de %d  = %d\n" RESET, n, x,racine(x, n));
+            scanf("%d", &y);
+            printf(VERT "racine %dieme de %d  = %d\n" RESET, y, x,racine(x, y));
             getchar();
             break;
         case 9:
             printf(CYAN " Fonctionnalite 9: Racine carree \n" RESET);
             printf("Entrer un nombre\n" JAUNE ">> " RESET);
             scanf("%d", &n);
-            printf(VERT "Racine carree de %d = %d\n" RESET, n, racineCarree(n));
+            printf(VERT "Racine carree de %f = %f\n" RESET, n, racineCarree(n));
             getchar();
             break;
         case 10:
@@ -134,25 +134,3 @@ int main()
     
     return 0;
 }
-
-
-
-/* int main() {
-    int a, b, resultat;
-
-    
-    printf("Entrez le premier nombre : ");
-    scanf("%d", &a);
-
-    printf("Entrez le deuxième nombre : ");
-    scanf("%d", &b);
-
-    
-    resultat = somme(a, b);
-
-
-    printf("La somme de %d et %d est %d\n", a, b, resultat);
-
-    return 0;
-}
- */
