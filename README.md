@@ -15,6 +15,9 @@ make
 ## commande d'execution:
 [PowerShell]
 make run
+## commande pour supprimer l'executable:
+[PowerShell]
+make clean
 
 réalisé par : 
 Lady Black(MAGUITO PAKOO Suzi)
