@@ -1,4 +1,4 @@
-#include "puissance.h"
+#include "..\include\puissance.h"
 #include <math.h>
 
 long int puissance(int base, int exposant) {
