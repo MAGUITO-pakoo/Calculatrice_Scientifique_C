@@ -4,13 +4,17 @@ ce projet est une calculatrice scientifique basique fait  en équipe de 4, déve
 elle permet d'effectuer les opérations tel que :
 -addition, soustraction
 -multiplication, division
--puissance et racine nième
+-factoriel, puissance et racine nième
 -le sinus, le cosinus et la tangente des angles
 
 
-commande de compilation: 
-<!-- [PowerShell]
-gcc calco.c function.c -o calco.exe -->
+## commande de compilation: 
+[PowerShell]
+make
+
+## commande d'execution:
+[PowerShell]
+make run
 
 réalisé par : 
 Lady Black(MAGUITO PAKOO Suzi)
