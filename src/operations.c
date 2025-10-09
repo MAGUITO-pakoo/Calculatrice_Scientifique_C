@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "operations.h"
+#include "..\include\operations.h"
 
 int somme(int x, int y) {
     return x + y;
@@ -22,7 +22,7 @@ int division(int a, int b) {
     return a / b;
 }
 
-unsigned int factoreil(unsigned int a)
+unsigned long factoreil(unsigned int a)
 {
     if(a > 1)
     {

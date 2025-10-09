@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "header.h": "c",
+        "cmath": "c",
+        "puissance.h": "c",
+        "utils.h": "c",
+        "operations.h": "c",
+        "trigo.h": "c"
+    }
+}

@@ -1,4 +1,4 @@
-#include "trigo.h"
+#include "..\include\trigo.h"
 #include <math.h>
 
 float sinus(float angle) {

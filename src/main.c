@@ -1,74 +1,137 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "operations.h"
-#include "puissance.h"
-#include "trigo.h"
-#include "utils.h"
+#include "..\include\operations.h"
+#include "..\include\puissance.h"
+#include "..\include\trigo.h"
+#include "..\include\utils.h"
 
 int main()
 {
-    debut:
     int n, choix, run;
     unsigned int a, b;
     int x, y;
 
     run = 1;
     while(run == 1){
+        pauseScreen();
         clearScreen();
-        printf("===CALCULATRICE SCIENTIFIQUE===\n");
-        printf("Faire un choix\n1) Multiplication\n2) Factoriel\n3) PGCD\n4) PPCM\n5) Soustraction\n6) Racine Carree\n99) Quitter\n>> ");
+        printf(CYAN "===CALCULATRICE SCIENTIFIQUE===\n" RESET);
+        printf("Faire un choix\n1) Multiplication\n2) Factoriel\n3) PGCD\n4) PPCM\n5) Soustraction\n6) Addition\n");
+        printf("7) Puissance\n8) Racine nieme\n9) Racine carree\n10) Sinus\n11) Cosinus\n12) Tangente\n99) Quitter\n" VERT">> " RESET);
         scanf("%d", &choix);
         choix = (int)choix;
 
         switch (choix)
         {
         case 1:
-            printf("Entrer le premier nombre\n>> ");
+            printf(CYAN " Fonctionnalite 1: Multiplication \n" RESET);
+            printf("Entrer le premier nombre\n" JAUNE ">> " RESET);
             scanf("%d", &x);
-            printf("Entrer le deuxieme nombre\n>> ");
+            printf("Entrer le deuxieme nombre\n" JAUNE ">> " RESET);
             scanf("%d", &y);
-            printf("%d * %d = %d\n", x, y, multiplication(x, y));
+            printf(VERT "%d * %d = %d\n" RESET, x, y, multiplication(x, y) );
+            getchar();
             break;
         case 2:
-            printf("Entrer un nombre\n>> ");
+            printf(CYAN " Fonctionnalite 2: Factoriel \n" RESET);
+            printf("Entrer un nombre\n" JAUNE ">> " RESET);
             scanf("%d", &n);
-            printf("%d! = %d\n", n, factoreil(n));
+            printf(VERT "%d! = %d\n" RESET, n, factoreil(n));
+            getchar();
             break;
         case 3:
-            printf("Entrer le premier nombre\n>> ");
+            printf(CYAN " Fonctionnalite 3: PGCD \n" RESET);
+            printf("Entrer le premier nombre\n" JAUNE ">> " RESET);
             scanf("%d", &a);
-            printf("Entrer le deuxieme nombre\n>> ");
+            printf("Entrer le deuxieme nombre\n" JAUNE ">> " RESET);
             scanf("%d", &b);
-            printf("PGCD(%d, %d) = %d\n", a, b, pgcd(a, b));
+            printf(VERT "PGCD(%d, %d) = %d\n" RESET, a, b, pgcd(a, b));
+            getchar();
             break;
         case 4:
-            printf("Entrer le premier nombre\n>> ");
+            printf(CYAN " Fonctionnalite 4: PPCM \n" RESET);
+            printf("Entrer le premier nombre\n" JAUNE ">> " RESET);
             scanf("%d", &a);
-            printf("Entrer le deuxieme nombre\n>> ");
+            printf("Entrer le deuxieme nombre\n" JAUNE ">> " RESET);
             scanf("%d", &b);
-            printf("PPCM(%d, %d) = %d\n", a, b, ppcm(a, b));
+            printf(VERT "PPCM(%d, %d) = %d\n" RESET, a, b, ppcm(a, b));
+            getchar();
             break;
         case 5:
-            printf("Entrer le premier nombre\n>> ");
+            printf(CYAN " Fonctionnalite 5: Soustraction \n" RESET);
+            printf("Entrer le premier nombre\n" JAUNE ">> " RESET);
             scanf("%d", &x);
-            printf("Entrer le deuxieme nombre\n>> ");
+            printf("Entrer le deuxieme nombre\n" JAUNE ">> " RESET);
             scanf("%d", &y);
-            printf("%d - %d = %d\n", x, y, soustraction(x, y));
+            printf(VERT "%d - %d = %d\n" RESET, x, y, soustraction(x, y));
+            getchar();
             break;
         case 6:
-            printf("Entrer un nombre\n>> ");
+            printf(CYAN " Fonctionnalite 6: Addition \n" RESET);
+            printf("Entrer le premier nombre\n" JAUNE ">> " RESET);
+            scanf("%d", &x);
+            printf("Entrer le deuxieme nombre\n" JAUNE ">> " RESET);
+            scanf("%d", &y);
+            printf(VERT "%d - %d = %d\n" RESET, x, y, somme(x, y));
+            getchar();
+            break;
+        case 7:
+            printf(CYAN " Fonctionnalite 7: Puissance \n" RESET);
+            printf("Entrer un nombre\n" JAUNE ">> " RESET);
+            scanf("%d", &x);
+            printf("Entrer l'exposant\n" JAUNE ">> " RESET);
             scanf("%d", &n);
-            printf("sqrt(%d) = %d\n", n, racineCarree(n));
+            printf(VERT "%d ^ %d = %d\n" RESET, x, n, puissance(x, n));
+            getchar();
+            break;
+        case 8:
+            printf(CYAN " Fonctionnalite 8: Racine nieme \n" RESET);
+            printf("Entrer un nombre\n" JAUNE ">> " RESET);
+            scanf("%d", &x);
+            printf("Entrer le n\n" JAUNE ">> " RESET);
+            scanf("%d", &n);
+            printf(VERT "racine %dieme de %d  = %d\n" RESET, n, x,racine(x, n));
+            getchar();
+            break;
+        case 9:
+            printf(CYAN " Fonctionnalite 9: Racine carree \n" RESET);
+            printf("Entrer un nombre\n" JAUNE ">> " RESET);
+            scanf("%d", &n);
+            printf(VERT "Racine carree de %d = %d\n" RESET, n, racineCarree(n));
+            getchar();
+            break;
+        case 10:
+            printf(CYAN " Fonctionnalite 10: Sinus \n" RESET);
+            printf("Entrer un angle en degre\n" JAUNE ">> " RESET);
+            scanf("%d", &n);
+            printf(VERT "sin(%d) = %d\n" RESET, n, sinus(n));
+            getchar();
+            break;
+        case 11:
+            printf(CYAN " Fonctionnalite 11: Cosinus \n" RESET);
+            printf("Entrer un angle en degre\n" JAUNE ">> " RESET);
+            scanf("%d", &n);
+            printf(VERT "cos(%d) = %d\n" RESET, n, cosinus(n));
+            getchar();
+            break;
+        case 12:
+            printf(CYAN " Fonctionnalite 12: Tangente \n" RESET);
+            printf("Entrer un angle en degre\n" JAUNE ">> " RESET);
+            scanf("%d", &n);
+            printf(VERT "tan(%d) = %d\n" RESET, n, tangente(n));
+            getchar();
             break;
         case 99:
+            printf(BLEU GRAS "\n Merci d'avoir utilise le programme ! Au revoir.\n" RESET);
+            getchar();
             run = 0;
             break;
         default:
-            system("clear");
-            goto debut;
+            printf(ROUGE "Choix invalide. Veuillez reessayer.\n" RESET);
+            getchar();
         }
     }
-pauseScreen();  
+    
     return 0;
 }
 
